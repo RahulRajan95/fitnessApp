@@ -1,5 +1,5 @@
 FROM maven:3.9.5-openjdk-21 AS build
-Copy . . 
+COPY . . 
 RUN mvn clean package -DSkipTests
 
 FROM openjdk:21-slim
