@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,6 +99,26 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
+        /* Custom logout button styles */
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+
         /* Animation for page elements */
         @keyframes fadeIn {
             to { opacity: 1; transform: translateY(0); }
@@ -134,12 +154,22 @@
                 font-size: 1em;
                 padding: 12px 30px;
             }
+
+            .logout-btn {
+                top: 10px;
+                right: 15px;
+                padding: 8px 18px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Logout Button -->
+    <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+
     <div class="container">
-        <h1>Welcome to Kerala Fitness</h1>
+        <h1>Welcome to the Fitness Club</h1>
         <button class="btn btn-primary" onclick="window.location.href='/addTrainer'">Add Trainers</button>
         <button class="btn btn-primary" onclick="window.location.href='/viewTrainers'">View Trainers</button>
     </div>
