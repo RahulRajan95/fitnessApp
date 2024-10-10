@@ -37,6 +37,6 @@ public class TrainerCtrl {
 		 trainerService.deleteTrainer(id);
 	}
 	
-	
+	//testing
 
 }
