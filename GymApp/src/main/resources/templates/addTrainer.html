@@ -107,12 +107,55 @@
                 padding: 20px;
             }
         }
+        
+                .btn-home {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-home:hover {
+            background: linear-gradient(45deg, #2ecc71, #3498db);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-home:active {
+            background: linear-gradient(45deg, #27ae60, #2980b9);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h2>Add Trainer</h2>
+        <a href="/home" class="btn-home">Back to Home</a>
         <form id="trainerForm">
             <div class="form-group">
                 <label for="name">Name</label>
